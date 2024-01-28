@@ -42,6 +42,9 @@ pip 23.3.1 from /Users/infra/Desktop/cosmic-backend-app/venv/lib/python3.11/site
  # update python interpreter to local existing interpreter, and select venv, now start imports
 ```
 
+* On running the app using: `uvicorn app:app --reload`
+* Automatically, FastAPI provides swagger documentation for APIs on http://localhost:8000/docs
+
 ### MongoDB Data Modelling principles:
 * https://medium.com/hackernoon/mongodb-schema-design-86327d8fae83
 * 
