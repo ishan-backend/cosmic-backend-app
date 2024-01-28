@@ -1,4 +1,4 @@
-### Installation steps:
+## Installation steps:
 Since this is my first time using Python3 and FastAPI for development, mentioning all related articles and steps for better documentation of learning.
 
 ### Python3, Pip and FastAPI installation
@@ -27,6 +27,7 @@ b32bfedbc535   mongo     "docker-entrypoint.s…"   About an hour ago   Up About
 
 
 ### Backend server specific library installations:
+https://www.mongodb.com/developer/languages/python/python-quickstart-fastapi/#prerequisites
 ```bash
 # create virtual environment inside project folder and activate it
  infra@IM-BAN-LAP-0243  ~/Desktop/cosmic-backend-app   main ✚ ● ?  python3 -m venv venv                                                                                      127 ↵  10034  15:17:30
@@ -40,3 +41,7 @@ pip 23.3.1 from /Users/infra/Desktop/cosmic-backend-app/venv/lib/python3.11/site
  infra@IM-BAN-LAP-0243  ~/Desktop/cosmic-backend-app   main ✚ ● ?  pip install -r requirements.txt
  # update python interpreter to local existing interpreter, and select venv, now start imports
 ```
+
+### MongoDB Data Modelling principles:
+* https://medium.com/hackernoon/mongodb-schema-design-86327d8fae83
+* 

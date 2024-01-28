@@ -1,0 +1,64 @@
+Problem Statement:
+
+You need to create a sample backend application in FastAPI, Python and MongoDB. The challenge assumes you have basic knowledge of Python and some knowledge of Flask / Django / FastAPI as well as MongoDB.
+
+Brief:
+You are building an ecommerce application like Flipkart/Amazon. You need to build the following APIs -
+
+1. API to List all available products in the system. You can create some 10-20 dummy products like TV, laptop, etc for reference.
+
+Each product should have these attributes -
+Product ID – Default _id (ObjectID) of MongoDB
+Product name
+Product price
+Product available quantity
+
+This API should have pagination enabled using limit/offset query parameters.
+
+Should have filters for min_price, max_price using query params
+
+This API should return the data in following format -
+    data: A list of records matching filters, if present. Each record should have -
+    id
+    name
+    price
+    quantity
+
+    page: An object defining metadata
+    limit: current limit of records
+    nextOffset: if more records are present
+    prevOffset: if previous records are present
+    total: total number of records
+
+Bonus points if the above response object can be created using 1 single DB query. Hint: check Aggregation Pipelines and Facets in MongoDB.
+
+2. API to Create a new order. Each order should have these properties -
+createdOn – auto generated, client should not send this.
+Items – list of items bought in the Order. Each record in this array would have these properties -
+productId
+boughtQuantity
+Total amount
+User Address – nested object having these properties -
+City
+Country
+Zip Code
+
+Tech Stack Allowed
+    Python - FastAPI - Mandatory to be python 3 (3.10 or above)
+    Use MongoDB as a database with Pymongo or Motor.
+
+How will we Judge
+    Code completeness
+    Should be able to test by running
+    Code clarity
+    Cleanliness
+    Well Formatted
+
+* Documentation – README with sample API Calls
+* Structure of APIs created
+* Endpoint and REST conventions followed.
+* Structure of MongoDB Collections / Database models / Queries
+* Data models - how you are storing the information in MongoDB or your database.
+* Your queries to MongoDB - how optimised they are (could be fairly good, not the best but certainly not very very performant hit)
+* Structuring relationships and lookups/joins in MongoDB
+
