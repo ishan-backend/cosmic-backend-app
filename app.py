@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Query, Path
+from fastapi import FastAPI
+from routes.route import router
 import motor.motor_asyncio
 import sys
 
@@ -22,29 +23,7 @@ except Exception as e:
     print(f"Connection error: {e}")
     sys.exit("MongoDB connection failed. Shutting down...")
 
-# Try to create a 'students' collection within the selected database
-try:
-    # Creating a collection named 'students' within the selected database
-    collection = client["students"]
+app.include_router(router)
 
-    # Printing a message indicating a successful collection creation
-    print("Collection 'students' created successfully")
-
-except Exception as e:
-    # Handling exceptions and printing an error message if collection creation fails
-    print(f"Error: {e}")
-
-@app.get('/products')
-def list_products(
-    min_price: float = Query(default=None, description="minimum price"),
-    max_price: float = Query(default=None, description="maximum price")
-):
-    products = []
-    return {"data": list(products)}
-
-
-@app.post('/purchase-order/create', status_code=201)
-def create_course(model: None):
-    return
 
 
